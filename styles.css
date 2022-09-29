@@ -1,27 +1,62 @@
-body, html{
-  height:100%;
+body,
+html {
+  height: 100%;
 }
-body{
+
+body {
   margin: 0px;
-  background-color:#444;
+  background-color: #444;
   font-size: 18px;
 }
-body, a:link, a:visited, a:active{
+
+body,
+a:link,
+a:visited,
+a:active {
   color: lightblue;
 }
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
+
+.title,
+.addDancerButton {
+  padding: 5px 12px;
+  float: right;
 }
-.topbar{
-  height:32px;
+
+.topbar {
+  height: 32px;
   background-color: #555;
 }
-.title{
+
+.title {
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+
+.dancer {
+  border: 10px solid red;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.bouncy {
+  border: 10px solid blue;
+  border-radius: 10px;
+  position: absolute;
+  border-style: double;
+}
+
+.grow {
+  border: 10px solid teal;
+  border-radius: 10px;
+  position: absolute;
+  border-style: double;
+  /* The animation part: */
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }

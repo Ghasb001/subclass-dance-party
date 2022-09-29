@@ -58,7 +58,3 @@ Dancer.prototype.setPosition = function (top, left) {
   };
   this.$node.css(styleSettings);
 };
-
-
-
-// setTimeout(this.step.bind(this),
