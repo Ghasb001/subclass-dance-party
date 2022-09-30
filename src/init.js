@@ -42,11 +42,17 @@ $(document).ready(function () {
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].$node.animate({ top: 200});
     }
-    // window.clearTimeout();
-
   });
-  //$('.lineUp').append('topbar');
-  //<div class="topbar"></div>
+/*
+ var closest = window.dancer[0]
+   for (var i = 0; i < window.dancers.length; i++) {
+     var pythag = Math.sqrt(Math.abs(window.dancers[i].top - closest.top) - Math.abs(window.dancers[i].left - closest.left));
+     if (pythag !== 0 && pythag < 500) {
+       closest.css({border:yellow})
+     }
+   }
+
+  */
 
 });
 

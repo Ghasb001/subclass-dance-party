@@ -20,7 +20,8 @@
 
 var BlinkyDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
-  // this.$node.addClass('makeBlinkyDancer');
+  this.$node.addClass('blinky');
+  this.$node.append($("<img class='blinky' src = 'img/IMG_8721.PNG' >"))
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
