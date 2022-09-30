@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   window.dancers = [];
 
-  $('.addDancerButton').on('click', function(event) {
+  $('.addDancerButton').on('click', function (event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
      * As long as the "data-dancer-maker-function-name" attribute of a
@@ -27,7 +27,26 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    // add generated dancer ti dancers array
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
+
   });
+
+
+
+  $('.lineUp').on('click', function (event) {
+    // find how to reference the positions of each dancer
+    //  then, make each dancer's top position match
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].$node.animate({ top: 200});
+    }
+    // window.clearTimeout();
+
+  });
+  //$('.lineUp').append('topbar');
+  //<div class="topbar"></div>
+
 });
 

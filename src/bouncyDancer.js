@@ -8,17 +8,19 @@ BouncyDancer.prototype.constructor = BouncyDancer;
 
 BouncyDancer.prototype.step = function () {
 
-  // Dancer.prototype.step.call(this, this.top, this.left);
-  //setTimeout(this.$node.css({ color: 'blue' }).bind(this), 10);
-
   Dancer.prototype.step.call(this);
 
-  // this.$node.animate({'top': '-= this.top*Math.cos(this.left/30000)', 'left': '+=10px',},'slow')
+  var newTop = ($('body').height() - 50) * Math.random();
+  var newLeft = ($('body').width() - 50) * Math.random();
 
-  // if(this.top < $(window).height()) {this.$node.animate({ 'top': '-= 10px', 'left': '+=10px'}, 'slow');}
-  // this.$node.effect("bounce", { times: 3 }, "slow");
-  this.$node.effect("bounce",{ times: 3 }, "slow");
-
-
+  this.$node
+    // .animate(
+    //   {
+    //     top: newTop,
+    //     left: newLeft
+    //   },
+    //   { duration: 2000 }
+    // )
+    .effect("bounce");
 
 };
