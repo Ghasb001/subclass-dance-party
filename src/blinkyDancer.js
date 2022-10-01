@@ -14,7 +14,7 @@ BlinkyDancer.prototype.step = function () {
 
   //call the original step() from Dancer
   Dancer.prototype.step.call(this);
-  this.$node.fadeToggle();
+  this.$node.toggle();
 
   this.$node.on('click', function (event) {
     $('.dancer.bouncy').remove();
