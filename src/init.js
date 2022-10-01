@@ -28,7 +28,7 @@ $(document).ready(function () {
       Math.random() * 1000
     );
     // add generated dancer ti dancers array
-    //window.dancers.push(dancer);
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
 
   });
@@ -38,49 +38,18 @@ $(document).ready(function () {
   $('.lineUp').on('click', function (event) {
     // find how to reference the positions of each dancer
     //  then, make each dancer's top position match
-
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].$node.animate({ top: 200 });
     }
   });
 
-  /*
-   var closest = window.dancer[0]
-     for (var i = 0; i < window.dancers.length; i++) {
-       var pythag = Math.sqrt(Math.abs(window.dancers[i].top - closest.top) - Math.abs(window.dancers[i].left - closest.left));
-       if (pythag !== 0 && pythag < 500) {
-         closest.css({border:yellow})
-       }
-     }
+  $('.blinky').on('click', function (event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+     if (window.dancers[i] === $('.bouncy')) {
+     window.dancers[i].slideUp()
+   }
+    }
+  });
 
-
-
-    // $(".blinky").mouseenter(function () {
-    //   $(this).find('blinky').hide();
-    // })
-    //   .mouseleave(function () {
-    //     $(this).find('blinky').show();
-    //   })
-
-  var distanceElements = function (elementOne, elementTwo) {
-  var distance = -1;
-
-  var x1 = elementOne.offset().top;
-  var y1 = elementOne.offset().left;
-  var x2 = elementTwo.offset().top;
-  var y2 = elementTwo.offset().left;
-  var xDistance = x1 - x2;
-  var yDistance = y1 - y2;
-
-  distance = Math.sqrt(
-    (xDistance * xDistance) + (yDistance * yDistance)
-  );
-
-  return distance;
-  }
-
-  */
 
 });
-
-
