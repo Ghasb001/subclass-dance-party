@@ -18,18 +18,30 @@
 //   return blinkyDancer;
 // };
 
-var BlinkyDancer = function(top, left, timeBetweenSteps) {
+var BlinkyDancer = function (top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('blinky');
-  this.$node.append($("<img class='blinky' src = 'img/IMG_8721.PNG' >"))
+  this.$node.append($("<img class ='dancer' src='img/IMG_8726.PNG' >")).addClass('blinky');
+
+
+  this.$node.on("mouseenter", function () {
+    $(".blinky").css("opacity", 0);
+  });
+
+  this.$node.on("mouseleave", function () {
+    $(".blinky").css("opacity", 1);
+  });
+
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
 
-BlinkyDancer.prototype.step = function() {
+BlinkyDancer.prototype.step = function () {
+
   //call the original step() from Dancer
   Dancer.prototype.step.call(this);
-  this.$node.toggle();
+  this.$node.fadeToggle();
+
 };
 

@@ -48,11 +48,19 @@ a:active {
   position: absolute;
   /* border-style: double; */
   height: 20px;
-
-  background-image: url(/img/IMG_8724.PNG);
   animation-name: bounce;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+
+}
+
+.bouncy {
+
+  position: absolute;
+  height: 20px;
+  /* animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
 
 }
 
@@ -67,8 +75,8 @@ a:active {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
-  background-image: url(/img/IMG_8724.PNG);
-  background-repeat: no-repeat;
+  /* background-image: url(/img/IMG_8724.PNG);
+  background-repeat: no-repeat; */
 }
 
 @keyframes spin-grow {
